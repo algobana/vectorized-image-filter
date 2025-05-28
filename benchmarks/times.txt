@@ -1,2 +1,2 @@
-Scalar Blur Time: 13.2463 ms
-SIMD Blur Time: 2.88258 ms
+Scalar Blur Time: 9.90435 ms
+SIMD Blur Time: 3.76953 ms
