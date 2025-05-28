@@ -1,5 +1,6 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -O2 -mavx -mavx2
+CXXFLAGS = -std=c++17 -O2 -mavx -mavx2 -pg
+LDFLAGS = -pg
 
 SRC = main.cpp image/image_io.cpp filters/blur_scalar.cpp filters/blur_simd_rgb.cpp
 OUT = filter

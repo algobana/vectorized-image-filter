@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <chrono>
+#include <thread>
 #include "image/image_io.hpp"
 #include "filters/filters.hpp"
 
