@@ -1,2 +1,13 @@
-Scalar Blur Time: 507.026 ms
-SIMD Blur Time: 307.754 ms
+OMP_NUM_THREADS=1
+Image loaded: 5200x3467
+Scalar Blur Time: 228.1 ms
+SIMD Blur Time: 168.677 ms
+OMP_NUM_THREADS=4
+Image loaded: 5200x3467
+Scalar Blur Time: 229.58 ms
+SIMD Blur Time: 81.3275 ms
+OMP_NUM_THREADS=8
+Image loaded: 5200x3467
+Scalar Blur Time: 228.982 ms
+SIMD Blur Time: 92.9716 ms
+

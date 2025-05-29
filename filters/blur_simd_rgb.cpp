@@ -1,10 +1,11 @@
-
 #include "filters.hpp"
 #include <immintrin.h>
 #include <cstring>
 #include <iostream>
+#include <omp.h> // OpenMP için
 
 void blurChannelSIMD(const unsigned char* input, unsigned char* output, int width, int height) {
+    #pragma omp parallel for
     for (int y = 1; y < height - 1; ++y) {
         for (int x = 1; x < width - 9; x += 8) {
             __m256i sum = _mm256_setzero_si256();
@@ -57,3 +58,4 @@ void blurSIMD(const unsigned char* input, unsigned char* output, int width, int 
     delete[] g;
     delete[] b;
 }
+
