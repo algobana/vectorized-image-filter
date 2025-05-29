@@ -1,13 +1,7 @@
-OMP_NUM_THREADS=1
-Image loaded: 5200x3467
-Scalar Blur Time: 228.1 ms
-SIMD Blur Time: 168.677 ms
-OMP_NUM_THREADS=4
-Image loaded: 5200x3467
-Scalar Blur Time: 229.58 ms
-SIMD Blur Time: 81.3275 ms
-OMP_NUM_THREADS=8
-Image loaded: 5200x3467
-Scalar Blur Time: 228.982 ms
-SIMD Blur Time: 92.9716 ms
-
+Scalar Blur Time: 242.989 ms
+SIMD Blur with 1 threads: 159.266 ms
+SIMD Blur with 2 threads: 110.624 ms
+SIMD Blur with 4 threads: 69.9992 ms
+SIMD Blur with 8 threads: 42.678 ms
+Best thread count: 8
+Final SIMD Blur Time: 41.9243 ms
