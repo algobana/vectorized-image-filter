@@ -1,0 +1,209 @@
+==28570== Memcheck, a memory error detector
+==28570== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==28570== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==28570== Command: ./filter
+==28570== 
+==28570== Invalid read of size 16
+==28570==    at 0x10B9B4: _mm256_cvtepu8_epi16 (avx2intrin.h:484)
+==28570==    by 0x10B9B4: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:17)
+==28570==    by 0x4AADA15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BB8A: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BB8A: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:47)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570==  Address 0x50a25d4 is 249,988 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB06: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:37)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570== 
+==28570== Invalid read of size 16
+==28570==    at 0x10B9CA: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:14)
+==28570==    by 0x4AADA15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BB8A: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BB8A: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:47)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570==  Address 0x50a25d6 is 249,990 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB06: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:37)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570== 
+==28570== Invalid read of size 16
+==28570==    at 0x10B9B4: _mm256_cvtepu8_epi16 (avx2intrin.h:484)
+==28570==    by 0x10B9B4: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:17)
+==28570==    by 0x4AADA15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BBAB: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BBAB: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:48)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570==  Address 0x50df6a4 is 249,988 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB12: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:38)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570== 
+==28570== Invalid read of size 16
+==28570==    at 0x10B9CA: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:14)
+==28570==    by 0x4AADA15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BBAB: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BBAB: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:48)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570==  Address 0x50df6a6 is 249,990 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB12: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:38)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570== 
+==28570== Invalid read of size 16
+==28570==    at 0x10B9B4: _mm256_cvtepu8_epi16 (avx2intrin.h:484)
+==28570==    by 0x10B9B4: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:17)
+==28570==    by 0x4AADA15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BBCC: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BBCC: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:49)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570==  Address 0x511c774 is 249,988 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB1D: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:39)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570== 
+==28570== Invalid read of size 16
+==28570==    at 0x10B9CA: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:14)
+==28570==    by 0x4AADA15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BBCC: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BBCC: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:49)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570==  Address 0x511c776 is 249,990 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB1D: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:39)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570== 
+==28570== Thread 2:
+==28570== Invalid read of size 16
+==28570==    at 0x10B9B4: _mm256_cvtepu8_epi16 (avx2intrin.h:484)
+==28570==    by 0x10B9B4: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:17)
+==28570==    by 0x4AB6C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x4B97AC2: start_thread (pthread_create.c:442)
+==28570==    by 0x4C28A03: clone (clone.S:100)
+==28570==  Address 0x5211fd4 is 249,988 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB06: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:37)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570== 
+==28570== Invalid read of size 16
+==28570==    at 0x10B9CA: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:14)
+==28570==    by 0x4AB6C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x4B97AC2: start_thread (pthread_create.c:442)
+==28570==    by 0x4C28A03: clone (clone.S:100)
+==28570==  Address 0x5211fd6 is 249,990 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB06: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:37)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570== 
+==28570== Thread 1:
+==28570== Invalid read of size 16
+==28570==    at 0x10B9B4: _mm256_cvtepu8_epi16 (avx2intrin.h:484)
+==28570==    by 0x10B9B4: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:17)
+==28570==    by 0x4AADA15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BB8A: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BB8A: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:47)
+==28570==    by 0x10AB5B: main (main.cpp:74)
+==28570==  Address 0x55abb24 is 249,988 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB06: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:37)
+==28570==    by 0x10AB5B: main (main.cpp:74)
+==28570== 
+==28570== Invalid read of size 16
+==28570==    at 0x10B9CA: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:14)
+==28570==    by 0x4AADA15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BB8A: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BB8A: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:47)
+==28570==    by 0x10AB5B: main (main.cpp:74)
+==28570==  Address 0x55abb26 is 249,990 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB06: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:37)
+==28570==    by 0x10AB5B: main (main.cpp:74)
+==28570== 
+==28570== Invalid read of size 16
+==28570==    at 0x10B9B4: _mm256_cvtepu8_epi16 (avx2intrin.h:484)
+==28570==    by 0x10B9B4: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:17)
+==28570==    by 0x4AADA15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BBAB: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BBAB: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:48)
+==28570==    by 0x10AB5B: main (main.cpp:74)
+==28570==  Address 0x8f132b4 is 249,988 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB12: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:38)
+==28570==    by 0x10AB5B: main (main.cpp:74)
+==28570== 
+==28570== Invalid read of size 16
+==28570==    at 0x10B9CA: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:14)
+==28570==    by 0x4AADA15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BBAB: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BBAB: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:48)
+==28570==    by 0x10AB5B: main (main.cpp:74)
+==28570==  Address 0x8f132b6 is 249,990 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB12: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:38)
+==28570==    by 0x10AB5B: main (main.cpp:74)
+==28570== 
+==28570== Invalid read of size 16
+==28570==    at 0x10B9B4: _mm256_cvtepu8_epi16 (avx2intrin.h:484)
+==28570==    by 0x10B9B4: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:17)
+==28570==    by 0x4AADA15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BBCC: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BBCC: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:49)
+==28570==    by 0x10AB5B: main (main.cpp:74)
+==28570==  Address 0x55e8bf4 is 249,988 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB1D: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:39)
+==28570==    by 0x10AB5B: main (main.cpp:74)
+==28570== 
+==28570== Invalid read of size 16
+==28570==    at 0x10B9CA: blurChannelSIMD(unsigned char const*, unsigned char*, int, int) [clone ._omp_fn.0] (blur_simd_rgb.cpp:14)
+==28570==    by 0x4AADA15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BBCC: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BBCC: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:49)
+==28570==    by 0x10AB5B: main (main.cpp:74)
+==28570==  Address 0x55e8bf6 is 249,990 bytes inside a block of size 250,000 alloc'd
+==28570==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x10BB1D: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:39)
+==28570==    by 0x10AB5B: main (main.cpp:74)
+==28570== 
+Image loaded: 500x500
+Scalar Blur Time: 36.5817 ms
+SIMD Blur with 1 threads: 40.6567 ms
+SIMD Blur with 2 threads: 273.826 ms
+SIMD Blur with 4 threads: 495.193 ms
+SIMD Blur with 8 threads: 940.385 ms
+Best thread count: 1
+Final SIMD Blur (best 1 threads): 32.124 ms
+==28570== 
+==28570== Process terminating with default action of signal 27 (SIGPROF)
+==28570==    at 0x4AB962E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x4AB6BE7: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x4B97AC2: start_thread (pthread_create.c:442)
+==28570==    by 0x4C28A03: clone (clone.S:100)
+==28570== 
+==28570== HEAP SUMMARY:
+==28570==     in use at exit: 109,176 bytes in 15 blocks
+==28570==   total heap usage: 60 allocs, 45 frees, 9,190,238 bytes allocated
+==28570== 
+==28570== 2,128 bytes in 7 blocks are possibly lost in loss record 5 of 9
+==28570==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28570==    by 0x40147D9: calloc (rtld-malloc.h:44)
+==28570==    by 0x40147D9: allocate_dtv (dl-tls.c:375)
+==28570==    by 0x40147D9: _dl_allocate_tls (dl-tls.c:634)
+==28570==    by 0x4B987B4: allocate_stack (allocatestack.c:430)
+==28570==    by 0x4B987B4: pthread_create@@GLIBC_2.34 (pthread_create.c:647)
+==28570==    by 0x4AB725F: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x4AADA10: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+==28570==    by 0x10BB8A: blurChannelSIMD (blur_simd_rgb.cpp:8)
+==28570==    by 0x10BB8A: blurSIMD(unsigned char const*, unsigned char*, int, int) (blur_simd_rgb.cpp:47)
+==28570==    by 0x10A9F2: main (main.cpp:52)
+==28570== 
+==28570== LEAK SUMMARY:
+==28570==    definitely lost: 0 bytes in 0 blocks
+==28570==    indirectly lost: 0 bytes in 0 blocks
+==28570==      possibly lost: 2,128 bytes in 7 blocks
+==28570==    still reachable: 107,048 bytes in 8 blocks
+==28570==         suppressed: 0 bytes in 0 blocks
+==28570== Reachable blocks (those to which a pointer was found) are not shown.
+==28570== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==28570== 
+==28570== For lists of detected and suppressed errors, rerun with: -s
+==28570== ERROR SUMMARY: 46 errors from 15 contexts (suppressed: 0 from 0)
